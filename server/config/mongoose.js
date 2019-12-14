@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
 
-mongoose.connect('mongodb://localhost/cakes', {
+mongoose.connect('mongodb+srv://aidapirahmadi:AidaPa1995@cluster0-pdrfb.mongodb.net/tulipbakery?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   // for deprecation warning from .findByIdAndUpdate
