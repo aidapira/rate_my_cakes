@@ -1,0 +1,89 @@
+<div class="container-fluid pl-0 pr-0 bg" style="height: 100%">
+    <div class="row header" style="height: 25%">
+        <div class="col col-md-2 mt-3" style="padding-left: 6.5rem">
+            <img src="../../assets/logo.png" class="img-fluid d-inline-block" style="max-width: 84%;" alt="logo">
+        </div>
+        <div class="col-md-auto" style="width: 65%; margin-top: 1.5rem;">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col mt-4 mb-4" style="margin-left: 1.5rem;">
+            <p>
+                Ready to Place Your Order?
+            </p>
+            <p>
+                Fill Out This Form!
+            </p>
+            <h2>
+                Plan your pastry with us!
+            </h2>
+            <p>
+                We only deliver to Souther Califonia (San Diego, LA, and Orange County :(
+            </p>
+            <form (submit)="handleCheckout()">
+                <h3>
+                    Tell us how many cakes would you like?
+                </h3>
+                <select [(ngModel)]="newOrder.quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <h3>
+                    Give us an estimate of when do you want it delivered to you?
+                </h3>
+                <input [(ngModel)]="newOrder.deliverydate" name="deliverydate" placeholder="I want this RIGHT NOW">
+                <p>
+                    Please give us a few days headsup
+                </p>
+                <h3>
+                    Who & where are we shipping this to? (You have to be in Southern California, US)
+                </h3>
+                <input [(ngModel)]="newOrder.firstname" name="firstname" placeholder="First name">
+                <input [(ngModel)]="newOrder.lastname" name="lastname" placeholder="Last name">
+                <input [(ngModel)]="newOrder.email" name="email" placeholder="Email address">
+                <input [(ngModel)]="newOrder.phone" name="phone" placeholder="Phone Number">
+                <input [(ngModel)]="newOrder.address" name="address" placeholder="Address">
+                <input [(ngModel)]="newOrder.apartment" name="apartment" placeholder="apartment">
+                <input [(ngModel)]="newOrder.city" name="city" placeholder="city">
+                <input [(ngModel)]="newOrder.zipcode" name="zipcode" placeholder="ZIP code">
+                <p>
+                    We will email you to confirm your delivery date & your special requests, if you have any!
+                </p>
+
+
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="border: 2px solid #CA1A05;">
+                    Check Out
+                </button>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Thank You!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                We will contact you within the next 24 hours to confirm your order and details! :)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <div class="row"></div>
+</div>

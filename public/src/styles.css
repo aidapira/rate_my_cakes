@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Montserrat", sans-serif; 
+    background-image: url("https://i.imgur.com/ho35Jgm.jpg");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.cbg {
+    height: 100%;
+    background-image: url("https://i.imgur.com/mfApPTy.jpg");
+    background: url("https://i.imgur.com/mfApPTy.jpg") center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.services-section img {
+    width: 95%;
+    height: 330px;
+    margin: auto;    
+    display: block;
+    border: 5px solid #E0E0E0;
+} 
+
+.cakename {
+    /* background-color: #EEEFF3; */
+    width: 190px;
+    display: inline-block;
+    /* margin-left: 91px; */
+    /* opacity: 0.5; */
+}
+
+.price {
+    position: relative;
+    bottom: 14px;
+    right: 7px;
+}
+
+.cakereview {
+    margin-left: 120px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #E0E0E0;
+}
+
+.header {
+    background-image: linear-gradient(to right, #F91E08 , #AF1803, #F91E08);
+    height: 5rem;
+}

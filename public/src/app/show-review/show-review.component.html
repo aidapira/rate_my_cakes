@@ -1,0 +1,12 @@
+<div style="display:inline-block">
+    <div *ngIf="cakeReviewed !== null" style="display:inline-block">
+        
+            <p style="display:inline-block">Avg rating: {{ avgRating }}</p>
+        
+        <div *ngFor="let review of cakeReviewed.reviews" class="overflow-auto" style="height: 100px;">
+            <p>Comment: {{ review.comment }}</p>
+            <!-- <p>Rating: {{ review.rating }}</p> -->
+        </div>
+    </div>
+
+</div>

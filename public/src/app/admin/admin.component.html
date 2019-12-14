@@ -1,0 +1,47 @@
+<form (submit)="handleSubmit()">
+    <div>
+        <label>Cake Name:</label>
+        <input type="text" name="cakeName" [(ngModel)]="newCake.cakeName">
+    </div>
+    <div>
+        <label>Image URL:</label>
+        <input type="text" name="imgUrl" [(ngModel)]="newCake.imgUrl">
+    </div>
+    <div>
+        <label>Price:</label>
+        <input type="number" name="price" [(ngModel)]="newCake.price">
+    </div>
+    <button>Submit</button>
+</form>
+
+
+<table style="width: 100%">
+    <thead>
+        <tr>
+            <th>Cake</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Address</th>
+            <th>Apartment</th>
+            <th>City</th>
+            <th>Zip Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let cake of cakes">
+            <tr *ngFor="let order of cake.orders">
+                <td>{{cake.cakeName}}</td>
+                <td>{{order.firstname}}</td>
+                <td>{{order.lastname}}</td>
+                <td>{{order.email}}</td>
+                <td>{{order.phone}}</td>
+                <td>{{order.address}}</td>
+                <td>{{order.apartment}}</td>
+                <td>{{order.city}}</td>
+                <td>{{order.zipcode}}</td>    
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

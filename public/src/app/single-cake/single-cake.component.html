@@ -1,0 +1,39 @@
+<div class="container-fluid pl-0 pr-0 bg" style="height: 100%">
+  <div class="row header" style="height: 25%">
+    <div class="col col-md-2 mt-3" style="padding-left: 6.5rem">
+      <img src="../../assets/logo.png" class="img-fluid d-inline-block" style="max-width: 84%;" alt="logo">
+    </div>
+    <div class="col-md-auto" style="width: 65%; margin-top: 1.5rem;">
+      <h4 class="d-inline-block ml-4 font-weight-bold text-wrap" style="color: #E0E0E0">
+          We're A Family Bakery -- We focus on seducing and alluring you into buying our cakes.
+      </h4>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-4 bsp_padding-0 col-centered overflow-auto cbg mt-4 services-section" style="height: 470px;">
+      <div class="bsp_bbb_item">
+        <div *ngFor="let cake of cakes">
+          <img (click)="selectCake(cake)" src="{{ cake.imgUrl }}" class="bsp_image mt-1" />
+          <h5 class="bsp_card-title cakename mt-3">{{ cake.cakeName }}</h5>
+          <h5 class="bsp_card-text d-inline-block pull-right mt-3">$ {{ cake.price }}</h5>
+          <div>
+            <app-buy-cake [cake]="cake" class="d-inline-block pull-right"></app-buy-cake>
+            <app-cake-review [cake]="cake" class="d-inline-block" style="box-sizing: unset; width: 70%"></app-cake-review>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"></div>
+  <div class="row">
+    <div class="col-md-5 bsp_padding-0 col-centered mt-5">
+      <app-show-cake *ngIf="selectedCake !== null" [cake]="selectedCake" ></app-show-cake>
+      <app-show-review *ngIf="selectedCake !== null" [cakeReviewed]="selectedCake" class="d-inline-block"></app-show-review>
+    </div>
+  </div>
+</div>
