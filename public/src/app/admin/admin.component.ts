@@ -36,6 +36,7 @@ export class AdminComponent implements OnInit {
         }
         else {
           this.cakes = data.cakes;
+          console.log(this.cakes);
         }
       })
   }
